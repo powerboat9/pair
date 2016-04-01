@@ -10,3 +10,5 @@ p = pyaudio.PyAudio()
 
 def playTone(frequency, duration):
     rate = 16000
+
+def 
