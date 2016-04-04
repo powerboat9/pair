@@ -6,9 +6,15 @@ from __future__ import division
 
 id = getID()
 
+rate = float(16000)
+
 p = pyaudio.PyAudio()
+stream = p.open(format=paInt16, rate=rate, output=True)
 
 def playTone(frequency, duration):
-    rate = 16000
-
+    samplePerCycle = rate / frequency
+    for i in range(rate * duration):
+        num = 32767 * math.sin(math.pi * 2 * (i % samplePerCycle) / samplePerCycle)
+        data = data + char(int(num))
+    
 def 
