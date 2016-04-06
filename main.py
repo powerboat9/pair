@@ -25,4 +25,4 @@ def close():
     stream.close()
     p.terminate()
 
-def 
+bands = array(
