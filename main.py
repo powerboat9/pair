@@ -13,7 +13,7 @@ baseFrequency = 18000
 binSize = 16
 
 def getBase(channel):
-    return baseFrequency + 16 * binSize * channel
+    return baseFrequency + 32 * binSize * channel
 
 def getToneData(frequency, duration):
     samplePerCycle = rate / frequency
@@ -74,6 +74,16 @@ def createSetting(name, value)
         for i in range(8):
             sending[bands["sendByte"] + i] = bits[8 - i - 1]
     return True
-            
-def getMessage():
+
+def getMessage(channel, duration):
+    data = ""
+    if sending[0] == 1:
+        data = getToneData(getBase(channel), duration)
+    for i in range(1, len(sending)):
+        if sending[i] == 1:
+            data = mixTones(data, getToneData(i + getBase(channel), duration))
+    return data
+
+def send(message)
     
+            
