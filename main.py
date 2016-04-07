@@ -79,7 +79,7 @@ def getMessage(channel, duration):
     data = ""
     if sending[0] == 1:
         data = getToneData(getBase(channel), duration)
-    for i in range(1, len(sending)):
+    for i in range(1, len(sending) + 1):
         if sending[i] == 1:
             data = mixTones(data, getToneData(i + getBase(channel), duration))
     return data
