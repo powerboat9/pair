@@ -29,7 +29,7 @@ stream = p.open(format=paInt16, channels=1, rate=rate, output=True)
 def playData(data):
     stream.write(data)
 
-def playTone(frequency, duration)
+def playTone(frequency, duration):
     data = getToneData(frequency, duration)
     playData(data)
 
