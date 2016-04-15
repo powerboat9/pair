@@ -50,7 +50,7 @@ def close():
     stream.close()
     p.terminate()
 
-bands = {"isOn": 0; "sendByte": 1, "send":9, "ready":10, "done":11}
+bands = {"isOn": 0, "sendByte": 1, "send":9, "ready":10, "done":11}
 sending = array()
 
 def forceBinnary(n)
