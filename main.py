@@ -84,6 +84,7 @@ def getMessage(channel, duration):
             data = mixTones(data, getToneData(i + getBase(channel), duration))
     return data
 
-def send(message)
-    
-            
+def send(message):
+    pass
+
+playTone(1000, 1000)
