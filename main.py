@@ -53,13 +53,13 @@ def close():
 bands = {"isOn": 0, "sendByte": 1, "send":9, "ready":10, "done":11}
 sending = array()
 
-def forceBinnary(n)
+def forceBinnary(n):
     if (n == 0) or (n == 1):
         return True
     else:
         return False
 
-def createSetting(name, value)
+def createSetting(name, value):
     if (name == "isOn") or (name == "send") or (name == "ready") or (name == "done"):
         ok = forceBinnary(value)
         if not ok:
