@@ -1,8 +1,8 @@
+from __future__ import division
 from uuid import getnode as getID
 import pyaudio
 import sys
 import math
-from __future__ import division
 
 id = getID()
 
